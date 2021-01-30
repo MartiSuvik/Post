@@ -1,0 +1,15 @@
+// PLACEHOLDERS ( @extend %somePlaceholder; )
+
+// example
+%somePlaceholder {
+    color: #fff;
+}
+
+%navStyles {
+    background-color: #882D60;
+    height: 4rem;
+    display: flex;
+    flex: 1;
+    border: 1px solid black;
+    justify-content: center;
+}

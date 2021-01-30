@@ -1,0 +1,37 @@
+// BASE SETTINGS
+
+// CSS built in variables ( like html selector but with higher specificity )
+:root {
+    --color-black: #000;
+    --color-white: #fff;
+
+    --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3); // X-direction / Y-direction / blur / color
+
+    --line: 1px solid var(--color-grey-light-2); // variable can contain variable
+}
+
+// all elements (before and after also) inherit border-box
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 16px; // browser default
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: sans-serif;
+    // background-color: orchid;
+}
+
+// Text selection background
+::selection {
+    background-color: var(--color-black);
+    color: var(--color-white);
+}

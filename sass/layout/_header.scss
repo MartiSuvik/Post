@@ -1,0 +1,103 @@
+// HEADER SECTION
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 1rem 3.5rem 1rem;
+
+    &__text {
+        padding: .3rem 0;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.5rem;
+        letter-spacing: .3rem;
+    }
+
+    &__heading {
+        padding: 2rem 0;
+        font-family: 'Poppins', sans-serif;
+        font-size: 5.5rem;
+    }
+}
+
+// NAVIGATION SECTION
+.nav {
+    display: flex;
+    position: relative;
+
+    & > a {
+        @extend %navStyles;
+        text-decoration: none;
+        color: black;
+
+        &:not(:last-child) {
+            border-right: none;
+        }
+
+        &:hover {
+            color: orangered;
+            background-color: orchid;
+            transition: all .3s;
+        }
+
+        @include respond(custom-700) { 
+            
+            &:not(:last-child) {
+                border-right: 1px solid black;
+            }
+
+            border-bottom: none;
+        }
+    }
+
+    & a svg:hover {
+        fill: orangered;
+        transition: all .3s;
+    }
+
+    &__item {
+        display: flex;
+
+        &--active {
+            background-color: orchid !important;
+        }
+        
+        & span {
+            font-family: 'Poppins', sans-serif;
+            align-self: center;
+        }
+    }
+
+    &__icons {
+        @extend %navStyles;
+        align-items: center;
+
+        &:hover {
+            background-color: orchid;
+            transition: all .3s;
+        }
+    }
+
+    &__svg-icon {
+        width: 16px;
+        height: 16px;
+        align-self: center;
+
+        fill: black;
+
+        &:first-child {
+            margin-right: 1rem;
+        }
+
+        &:hover {
+            fill: orangered;
+        }
+
+        @include respond(custom-700) { 
+            height: 62px;
+        }
+    }
+
+    @include respond(custom-700) { 
+        flex-direction: column;
+    }
+}
